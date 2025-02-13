@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="buttonStyles.css">
+    <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+    <title>Valentine's Day Design</title>
+</head>
+<body>
+
+    <video autoplay loop muted playsinline id="bg-video">
+        <source src="Pastel Pink Hearts Flying _ Heart Background _ Wallpaper Heart _ Animated Background.mp4" type="video/mp4">
+        Your browser does not support the video tag.
+    </video>
+    
+    <div class="container">
+        <!-- Valentine's Message Box -->
+        <div class="box message-box">
+            <div class="content">
+                <h2>Happy Valentine's Day!</h2>
+                <p>Open the Vault for a Surprise ❤️.</p>
+            </div>
+        </div>
+        
+        <!-- Passcode Entry Box -->
+        <div class="box passcode-box">
+            <input type="text" id="passcode" placeholder="Enter passcode" readonly>
+            <div class="keypad">
+                <button onclick="enterDigit(1)">1</button>
+                <button onclick="enterDigit(2)">2</button>
+                <button onclick="enterDigit(3)">3</button>
+                <button onclick="enterDigit(4)">4</button>
+                <button onclick="enterDigit(5)">5</button>
+                <button onclick="enterDigit(6)">6</button>
+                <button onclick="enterDigit(7)">7</button>
+                <button onclick="enterDigit(8)">8</button>
+                <button onclick="enterDigit(9)">9</button>
+                <button onclick="enterDigit(0)">0</button>
+                
+            </div>
+            <button onclick="clearDisplay()" id="clearbtn" class="clearbtn">C</button>
+                <button onclick="unlockVault()" id="okbtn">✔</button>
+        </div>
+    </div>
+
+    <script src="script.js"></script>
+</body>
+</html>

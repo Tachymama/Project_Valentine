@@ -1,0 +1,79 @@
+button {
+    appearance: button;
+    background-color: #E63946; /* Romantic red */
+    border: solid transparent;
+    border-radius: 20px;
+    border-width: 0 0 4px;
+    box-sizing: border-box;
+    color: #FFFFFF;
+    cursor: pointer;
+    display: inline-block;
+    font-size: 16px;
+    font-weight: 700;
+    letter-spacing: .8px;
+    line-height: 20px;
+    margin: 0;
+    outline: none;
+    overflow: visible;
+    padding: 14px 22px;
+    text-align: center;
+    text-transform: uppercase;
+    touch-action: manipulation;
+    transform: translateZ(0);
+    transition: filter .2s, transform 0.1s;
+    user-select: none;
+    -webkit-user-select: none;
+    vertical-align: middle;
+    white-space: nowrap;
+    position: relative;
+    /* box-shadow: 0 4px 0 #B71C1C; */
+}
+
+#clearbtn, #okbtn{
+    margin-top: 10px;
+    width: 200px;
+}
+#okbtn.correct-attempt::after{
+    background-color: green;
+}
+
+#okbtn.wrong-attempt::after {
+    content: "";
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: #f4002d;
+    opacity: 0.5;
+    transition: opacity 0.5s ease-in-out;
+}
+
+button:after {
+    background-clip: padding-box;
+    background-color: #FF4D6D; /* Lighter pink-red */
+    border: solid transparent;
+    border-radius: 20px;
+    border-width: 0 0 4px;
+    bottom: -4px;
+    content: "";
+    left: 0;
+    position: absolute;
+    right: 0;
+    top: 0;
+    z-index: -1;
+}
+
+button:hover:not(:disabled) {
+    filter: brightness(1.1);
+}
+
+button:active {
+    transform: translateY(2px);
+    /* box-shadow: 0 2px 0 #B71C1C; */
+}
+
+button:disabled {
+    cursor: auto;
+    opacity: 0.6;
+}

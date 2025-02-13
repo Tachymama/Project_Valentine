@@ -1,0 +1,98 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>My Valentine's Day Website</title>
+    <link rel="stylesheet" href="messageStyle.css">
+    <link rel="stylesheet" href="../buttonStyles.css">
+    <style>
+        img {
+            width: 100px; /* Small preview */
+            cursor: pointer;
+            transition: 0.3s;
+        }
+
+        /* Fullscreen Overlay */
+        .lightbox {
+            display: none;
+            position: fixed;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            background: rgba(0, 0, 0, 0.8);
+            justify-content: center;
+            align-items: center;
+        }
+
+        .lightbox img {
+            max-width: 90%;
+            max-height: 90%;
+            border-radius: 10px;
+        }
+    </style>
+</head>
+<body>
+    <header>
+        <h1>Happy Valentine's Day!</h1>
+        <p>To My Special Someone ❤️</p>
+    </header>
+
+    <section class="message">
+        <h2>My Heartfelt Message</h2>
+        <p>
+            For my Dear girlfriend Donnavie Alea Laguerta,<br><br>
+            On this special day, I want to take a moment to tell you how much you mean to me.
+            You fill my life with joy, love, and happiness. Every moment with you is a treasure,
+            and I am so grateful to have you in my life. You are my everything, and I love you more
+            than words can express. I want to be with you until the end, even if we sometimes disagree what matters most is that you are the only one I love. Happy Valentine's Day, my love! ❤️
+        </p>
+        <!-- <a href="../Envelope/envelope.html"></a> -->
+        <button onclick="window.location.href='../Envelope/envelope.html';">Press For Surprise!</button>
+    </section>
+
+    <section class="gallery">
+        <h2>Our Memories Together</h2>
+        <div class="image-grid">
+            <img src="./Pictures/img1.jpg" alt="Memory 1"  onclick="openLightbox(this)">
+            <img src="./Pictures/img2.2.jpg" alt="Memory 2" onclick="openLightbox(this)">
+            <img src="./Pictures/img3.jpg" alt="Memory 3" onclick="openLightbox(this)">
+            <img src="./Pictures/img4.jpg" alt="Memory 4" onclick="openLightbox(this)">
+            <img src="./Pictures/img5.jpg" alt="Memory 5" onclick="openLightbox(this)">
+            <img src="./Pictures/img6.jpg" alt="Memory 6" onclick="openLightbox(this)">
+            <img src="./Pictures/img7.jpg" alt="Memory 7" onclick="openLightbox(this)">
+            <img src="./Pictures/img8.jpg" alt="Memory 8" onclick="openLightbox(this)">
+            <img src="./Pictures/img9.jpg" alt="Memory 9" onclick="openLightbox(this)">
+            <img src="./Pictures/img10.jpg" alt="Memory 10" onclick="openLightbox(this)">
+            <img src="./Pictures/img11.jpg" alt="Memory 11" onclick="openLightbox(this)">
+            <img src="./Pictures/img12.jpg" alt="Memory 12" onclick="openLightbox(this)">
+            <img src="./Pictures/img13.jpg" alt="Memory 13"onclick="openLightbox(this)">
+            <img src="./Pictures/img14.jpg" alt="Memory 14" onclick="openLightbox(this)">
+            <img src="./Pictures/img15.jpg" alt="Memory 15" onclick="openLightbox(this)">
+            <img src="./Pictures/img16.jpg" alt="Memory 16" onclick="openLightbox(this)">
+            <img src="./Pictures/img17.jpg" alt="Memory 17" onclick="openLightbox(this)">
+            <img src="./Pictures/img18.jpg" alt="Memory 18" onclick="openLightbox(this)">
+
+            <div class="lightbox" id="lightbox" onclick="closeLightbox()">
+                <img id="lightbox-img">
+            </div>
+        </div>
+    </section>
+
+    <footer>
+        <p>Created with love by your one and only Rodward Lucio Fernando Labog ❤️</p>
+    </footer>
+
+    <script>
+        function openLightbox(img) {
+            document.getElementById("lightbox").style.display = "flex";
+            document.getElementById("lightbox-img").src = img.src;
+        }
+
+        function closeLightbox() {
+            document.getElementById("lightbox").style.display = "none";
+        }
+    </script>
+</body>
+</html>
