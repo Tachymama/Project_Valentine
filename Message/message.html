@@ -10,12 +10,12 @@
         img {
             width: 100px; /* Small preview */
             cursor: pointer;
-            transition: 0.3s;
+            transition: transform 0.3s ease-in-out;
         }
 
         /* Fullscreen Overlay */
         .lightbox {
-            display: none;
+            display: flex;
             position: fixed;
             top: 0;
             left: 0;
@@ -24,12 +24,27 @@
             background: rgba(0, 0, 0, 0.8);
             justify-content: center;
             align-items: center;
+            opacity: 0;
+            pointer-events: none; /* Prevent interaction when hidden */
+            transition: opacity 0.3s ease-in-out;
         }
 
         .lightbox img {
             max-width: 90%;
             max-height: 90%;
             border-radius: 10px;
+            transform: scale(0.8);
+            transition: transform 0.3s ease-in-out;
+        }
+
+        /* When active, make lightbox visible */
+        .lightbox.show {
+            opacity: 1;
+            pointer-events: auto;
+        }
+
+        .lightbox.show img {
+            transform: scale(1); /* Smooth zoom-in effect */
         }
     </style>
 </head>
@@ -85,13 +100,15 @@
     </footer>
 
     <script>
-        function openLightbox(img) {
-            document.getElementById("lightbox").style.display = "flex";
-            document.getElementById("lightbox-img").src = img.src;
+         function openLightbox(img) {
+            const lightbox = document.getElementById("lightbox");
+            const lightboxImg = document.getElementById("lightbox-img");
+            lightboxImg.src = img.src;
+            lightbox.classList.add("show"); // Add class to show lightbox
         }
 
         function closeLightbox() {
-            document.getElementById("lightbox").style.display = "none";
+            document.getElementById("lightbox").classList.remove("show"); // Remove class to hide
         }
     </script>
 </body>
