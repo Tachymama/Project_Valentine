@@ -2,7 +2,7 @@ let passcodeInput = document.getElementById("passcode");
 let messageBox = document.querySelector(".message-box .content");
 let attemptCount = 0;
 //const correctPasscode = "08192024"; // August 19, 2024
-const correctPasscode = "1";
+const correctPasscode = "08192024";
 let okButton = document.getElementById("okbtn");
 
 
